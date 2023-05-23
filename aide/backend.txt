@@ -1,0 +1,40 @@
+1- créer un dossier backend
+2- initialiser un depot git:
+    git init
+3- Créer un dossier gitignore dans le dossier backend
+    .gitignore:
+        node_modules
+4- Créer un package .json: dans le terminal:
+    npm init
+    cmd enter
+    - qd la quetsion entry point:
+        taper: server.js
+        cm enter
+5-Créer un fichier server.js dans backend: Il contiendra le premier serveur Node.
+6- Pour créer un serveur Node dans votre fichier server.js
+
+    const http = require('http');
+
+    const server = http.createServer((req, res) => {
+        res.end('Voilà la réponse du serveur !');
+    });
+
+    server.listen(process.env.PORT || 3000);
+7- Démarrer le serveur, dans le terminal:
+    node server
+8- Verifier dans postamn le server:
+    http://localhost:3000
+9- Pour simplifier le développement Node(live server): installer nodemon
+    nodemon server
+
+////////////EXPRESS//////////
+1- Pour faciliter le code coté serveur il faut installer express.js:
+    npm install express
+2- Créez un fichier app.js , où vous placerez votre application Express :
+    const express = require('express');
+
+    const app = express();
+
+
+
+    module.exports = app;
